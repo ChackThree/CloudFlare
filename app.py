@@ -19,6 +19,8 @@ from browser import BrowserHandler
 
 load_dotenv()
 
+os.environ["DISPLAY"] = ":0"
+
 logger.remove(0)
 logger.add(sys.stdout, level=os.getenv('LOG_LEVEL', 'INFO'))
 
